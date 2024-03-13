@@ -5,7 +5,7 @@ import {NavbarLinks} from "../../data/navbar-links"
 import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import {AiOutlineShoppingCart} from "react-icons/ai"
-// import ProfileDropDown from '../core/Auth/ProfileDropDown'
+import ProfileDropDown from '../core/Auth/ProfileDropDown'
 import { apiConnector } from '../../services/apiconnector'
 import { categories } from '../../services/apis'
 import { useState } from 'react'
@@ -155,7 +155,7 @@ const Navbar = () => {
                 )
             }
             {
-                // token !== null && <ProfileDropDown />
+                token !== null && <ProfileDropDown />
             }
             
         </div>
