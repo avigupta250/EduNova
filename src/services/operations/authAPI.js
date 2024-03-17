@@ -5,7 +5,7 @@ import { resetCart } from "../../slices/cartSlice"
 import { setUser } from "../../slices/profileSlice"
 import { apiConnector } from "../apiconnector"
 import { endpoints } from "../apis"
-// import  Navigate from "react-router-dom"
+import  Navigate from "react-router-dom"
 
 const {
   SENDOTP_API,
@@ -111,6 +111,7 @@ export function login(email, password, navigate) {
       localStorage.setItem("token", JSON.stringify(response.data.token))
       localStorage.setItem("user", JSON.stringify(response.data.user))
       // navigate("/dashboard/my-profile")
+      navigate("/")
     } catch (error) {
       console.log("LOGIN API ERROR............", error)
       toast.error(`Login Failed ${error}`)
@@ -138,7 +139,7 @@ export function getPasswordResetToken(email , setEmailSent) {
   return async(dispatch) => {
     dispatch(setLoading(true));
     try{
-      const response = await apiConnector("POST", RESETPASSTOKEN_API, {email,})
+      const response = await apiConnector("POST", RESETPASSTOKEN_API, {email})
 
       console.log("RESET PASSWORD TOKEN RESPONSE....", response);
 
