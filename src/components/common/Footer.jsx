@@ -172,7 +172,7 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="text-center">Made with ❤️ CodeHelp © 2023 Studynotion</div>
+          <div className="text-center">Site By <a href="https://avigupta.vercel.app/" target="_blank">Avi Gupta</a> © 2023 EduNova</div>
         </div>
       </div>
     </div>

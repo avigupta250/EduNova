@@ -60,8 +60,12 @@ const Navbar = () => {
       <div className='flex w-11/12 max-w-maxContent items-center justify-between'>
         {/* Image */}
       <Link to="/">
-        <img src={logo} width={160} height={42} loading='lazy'/>
+      <div className='w-[160px] h-[42px] font-extrabold text-[30px] text-white'>
+        <h1><span className='text-blue-500'>E</span>du<span>N</span>ova</h1>
+      </div>
+        {/* <img src={logo} width={160} height={42} loading='lazy'/> */}
       </Link>
+     
 
       {/* Nav Links */}
       <nav>
